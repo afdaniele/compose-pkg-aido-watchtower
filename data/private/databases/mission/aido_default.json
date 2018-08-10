@@ -1,0 +1,24 @@
+{
+	"_data": {
+		"blocks": [
+			{
+				"shape": {
+					"rows": 4,
+					"cols": 8
+				},
+				"renderer": "SensorMsgs_CompressedImage",
+				"title": "Camera",
+				"subtitle": "\/camera_node\/image\/compressed",
+				"args": {
+					"topic": "\/camera_node\/image\/compressed",
+					"fps": 5,
+					"style": "cover",
+					"position": "center center",
+					"background-color": "white"
+				}
+			}
+		]
+	},
+	"_metadata": [
+	]
+}

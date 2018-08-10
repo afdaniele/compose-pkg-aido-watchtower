@@ -1,0 +1,13 @@
+{
+    "name" : "AIDO - Watchtower",
+    "description" : "Provides functionalities for monitoring AIDO Watchtowers",
+    "core" : {
+        "namespace" : "aido_watchtower",
+        "file" : "AIDOWatchtower.php",
+        "class" : "AIDOWatchtower"
+    },
+    "dependencies" : {
+        "system-packages" : [],
+        "packages" : []
+    }
+}

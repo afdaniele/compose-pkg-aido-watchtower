@@ -1,0 +1,22 @@
+{
+    "name" : "Monitor",
+    "package" : "aido_watchtower",
+    "menu_entry" : {
+        "order" : 1,
+        "icon" : {
+            "class" : "fa",
+            "name" : "video-camera"
+        },
+        "responsive" : {
+            "priority" : -10
+        },
+        "exclude_roles" : []
+    },
+    "child_pages" : [],
+    "access_level" : [
+        "administrator",
+        "supervisor",
+        "user",
+        "guest"
+    ]
+}
