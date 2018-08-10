@@ -18,7 +18,7 @@ $block_gutter = 10;
 $block_border_thickness = 1;
 
 // read mission details
-$db = new Database( 'aido_duckiebot', 'mission' );
+$db = new Database( 'aido_watchtower', 'mission' );
 $res = $db->read($mission_name);
 if( !$res['success'] ){
     Core::throwError( $res['data'] );
@@ -40,7 +40,7 @@ $sizes = [
 
 // create mission control grid
 $mission_control = new MissionControl(
-    "duckiebot-mission-control-grid",
+    "watchtower-mission-control-grid",
     $grid_width,
     $resolution,
     $block_gutter,
@@ -70,7 +70,7 @@ $mission_control = new MissionControl(
                 <strong>TODO: AIDO Submission #</strong>
 			</td>
             <td class="text-right" style="width:33%; padding-top:10px">
-                <span id="duckiebot_bridge_status">
+                <span id="watchtower_bridge_status">
                     <i class="fa fa-spinner fa-pulse"></i> Connecting...
                 </span>
 			</td>
@@ -92,16 +92,16 @@ $mission_control = new MissionControl(
             });
             ros.on('connection', function() {
                 console.log('Connected to websocket server.');
-                $('#duckiebot_bridge_status').html('<span class="glyphicon glyphicon-ok-sign" aria-hidden="true" style="color:green"></span> Bridge: <strong>Connected</strong>');
+                $('#watchtower_bridge_status').html('<span class="glyphicon glyphicon-ok-sign" aria-hidden="true" style="color:green"></span> Bridge: <strong>Connected</strong>');
                 $(document).trigger('ROSBridge_connected');
             });
             ros.on('error', function(error) {
                 console.log('Error connecting to websocket server: ', error);
-                $('#duckiebot_bridge_status').html('<span class="glyphicon glyphicon-remove-sign" aria-hidden="true" style="color:red"></span> Bridge: <strong>Error</strong>');
+                $('#watchtower_bridge_status').html('<span class="glyphicon glyphicon-remove-sign" aria-hidden="true" style="color:red"></span> Bridge: <strong>Error</strong>');
             });
             ros.on('close', function() {
                 console.log('Connection to websocket server closed.');
-                $('#duckiebot_bridge_status').html('<span class="glyphicon glyphicon-off" aria-hidden="true" style="color:red"></span> Bridge: <strong>Closed</strong>');
+                $('#watchtower_bridge_status').html('<span class="glyphicon glyphicon-off" aria-hidden="true" style="color:red"></span> Bridge: <strong>Closed</strong>');
             });
         });
     </script>

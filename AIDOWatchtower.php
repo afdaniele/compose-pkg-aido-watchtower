@@ -13,7 +13,7 @@ use \system\classes\Database;
 use \system\classes\Configuration;
 
 /**
-*   Module for managing AIDO duckiebots
+*   Module for managing AIDO watchtowers
 */
 class AIDOWatchtower{
 
