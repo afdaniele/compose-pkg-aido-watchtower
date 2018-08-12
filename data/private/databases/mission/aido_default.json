@@ -11,7 +11,7 @@
 				"subtitle": "\/camera_node\/image\/compressed",
 				"args": {
 					"topic": "\/camera_node\/image\/compressed",
-					"fps": 5,
+					"fps": 30,
 					"style": "cover",
 					"position": "center center",
 					"background-color": "white"

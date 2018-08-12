@@ -32,9 +32,11 @@ if( !$res['success'] ){
 }
 $mission_control_grid = $res['data'];
 // update topic name
-foreach( $mission_control_grid as &$block ){
+foreach( $mission_control_grid['blocks'] as &$block ){
     if( $block['title'] == 'Camera' ){
-        $block['args']['topic'] = sprintf('/%s/%s', Core::getSetting('navbar_title', 'core', 'n.a.'), $block['args']['topic']);
+        $topic_name = sprintf('/%s/%s', Core::getSetting('navbar_title', 'core', 'n.a.'), $block['args']['topic']);
+        $block['args']['topic'] = $topic_name;
+        $block['subtitle'] = $topic_name;
     }
 }
 
