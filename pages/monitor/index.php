@@ -17,6 +17,10 @@ $grid_width = 966; // do not use 970px to accomodate for differences between bro
 $resolution = 8;
 $block_gutter = 10;
 $block_border_thickness = 1;
+$websocket_address = Core::getSetting('websocket_address', 'aido_watchtower');
+$websocket_port = Core::getSetting('websocket_port', 'aido_watchtower');
+// use BASE_URL if $websocket_address is NULL
+if( is_null($websocket_address) ) $websocket_address = Configuration::$BASE_URL;
 
 // read mission details
 $db = new Database( 'aido_watchtower', 'mission' );
@@ -88,8 +92,7 @@ $mission_control = new MissionControl(
 
             // Connect to ROS
             window.ros = new ROSLIB.Ros({
-                // TODO: PORT hard-coded
-                url : "ws://localhost:9001"
+                url : "ws://<?php echo $websocket_address ?>:<?php echo $websocket_port ?>"
             });
             ros.on('connection', function() {
                 console.log('Connected to websocket server.');
