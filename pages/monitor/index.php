@@ -20,7 +20,7 @@ $block_border_thickness = 1;
 $websocket_address = Core::getSetting('websocket_address', 'aido_watchtower');
 $websocket_port = Core::getSetting('websocket_port', 'aido_watchtower');
 // use $HOSTNAME if $websocket_address is NULL
-if( is_null($websocket_address) ) $websocket_address = Configuration::$HOSTNAME;
+if( is_null($websocket_address) || strlen($websocket_address) < 2 ) $websocket_address = Configuration::$HOSTNAME;
 
 // read mission details
 $db = new Database( 'aido_watchtower', 'mission' );
