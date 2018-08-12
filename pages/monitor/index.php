@@ -4,9 +4,10 @@ use \system\classes\Configuration as Configuration;
 use \system\classes\Database as Database;
 ?>
 
-<script src="<?php echo Core::getJSscriptURL('jquery-ui-1.11.1.js', 'duckietown'); ?>"></script>
-<script src="<?php echo Core::getJSscriptURL('packery.pkgd.min.js', 'duckietown'); ?>"></script>
-<script src="<?php echo Core::getJSscriptURL('draggabilly.pkgd.min.js', 'duckietown'); ?>"></script>
+<script src="<?php echo Core::getJSscriptURL('jquery-ui-1.11.1.js', 'duckietown'); ?>" type="text/javascript"></script>
+<script src="<?php echo Core::getJSscriptURL('packery.pkgd.min.js', 'duckietown'); ?>" type="text/javascript"></script>
+<script src="<?php echo Core::getJSscriptURL('draggabilly.pkgd.min.js', 'duckietown'); ?>" type="text/javascript"></script>
+<script src="<?php echo Core::getJSscriptURL('roslibjs.min.js', 'duckietown'); ?>" type="text/javascript"></script>
 
 <?php
 $mission_name = 'aido_default';
@@ -62,12 +63,12 @@ $mission_control = new MissionControl(
 		</tr>
         <tr>
 			<td class="text-left" style="width:33%; padding-top:10px">
-                <i class="fa fa-car" aria-hidden="true"></i> Vehicle:
+                <i class="fa fa-video-camera" aria-hidden="true"></i> Watch Tower:
                 <strong><?php echo Core::getSetting('navbar_title', 'core', 'n.a.') ?></strong>
 			</td>
             <td class="text-center" style="width:33%; padding-top:10px">
-                <i class="fa fa-object-ungroup" aria-hidden="true"></i> Mission:
-                <strong>TODO: AIDO Submission #</strong>
+                <i class="fa fa-map-marker" aria-hidden="true"></i> Location:
+                <strong>TODO: XY of the camera here</strong>
 			</td>
             <td class="text-right" style="width:33%; padding-top:10px">
                 <span id="watchtower_bridge_status">
