@@ -20,7 +20,9 @@ $block_border_thickness = 1;
 $websocket_address = Core::getSetting('websocket_address', 'aido_watchtower');
 $websocket_port = Core::getSetting('websocket_port', 'aido_watchtower');
 // use $HOSTNAME if $websocket_address is NULL
-if( is_null($websocket_address) || strlen($websocket_address) < 2 ) $websocket_address = Configuration::$HOSTNAME;
+if( is_null($websocket_address) || strlen($websocket_address) < 2 ){
+    $websocket_address = Configuration::$HOSTNAME;
+}
 
 // read mission details
 $db = new Database( 'aido_watchtower', 'mission' );
@@ -29,6 +31,12 @@ if( !$res['success'] ){
     Core::throwError( $res['data'] );
 }
 $mission_control_grid = $res['data'];
+// update topic name
+foreach( $mission_control_grid as &$block ){
+    if( $block['title'] == 'Camera' ){
+        $block['args']['topic'] = sprintf('/%s/%s', Core::getSetting('navbar_title', 'core', 'n.a.'), $block['args']['topic']);
+    }
+}
 
 // define allowed block sizes
 $sizes = [
