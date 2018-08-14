@@ -76,15 +76,11 @@ $mission_control = new MissionControl(
 			</td>
 		</tr>
         <tr>
-			<td class="text-left" style="width:33%; padding-top:10px">
+			<td class="text-left" style="width:50%; padding-top:10px">
                 <i class="fa fa-video-camera" aria-hidden="true"></i> Watch Tower:
                 <strong><?php echo Core::getSetting('navbar_title', 'core', 'n.a.') ?></strong>
 			</td>
-            <td class="text-center" style="width:33%; padding-top:10px">
-                <i class="fa fa-map-marker" aria-hidden="true"></i> Location:
-                <strong>TODO: XY of the camera here</strong>
-			</td>
-            <td class="text-right" style="width:33%; padding-top:10px">
+            <td class="text-right" style="width:50%; padding-top:10px">
                 <span id="watchtower_bridge_status">
                     <i class="fa fa-spinner fa-pulse"></i> Connecting...
                 </span>
