@@ -71,7 +71,7 @@ $mission_control = new MissionControl(
 		<tr>
 			<td colspan="4" style="border-bottom:1px solid #ddd">
 				<h2>
-                    Mission Control
+                    Watchtower - Mission Control
                 </h2>
 			</td>
 		</tr>
