@@ -71,13 +71,13 @@ $mission_control = new MissionControl(
 		<tr>
 			<td colspan="4" style="border-bottom:1px solid #ddd">
 				<h2>
-                    Mission Control
+                    Watchtower - Mission Control
                 </h2>
 			</td>
 		</tr>
         <tr>
 			<td class="text-left" style="width:33%; padding-top:10px">
-                <i class="fa fa-video-camera" aria-hidden="true"></i> Watch Tower:
+                <i class="fa fa-video-camera" aria-hidden="true"></i> Tower:
                 <strong><?php echo Core::getSetting('navbar_title', 'core', 'n.a.') ?></strong>
 			</td>
             <td class="text-center" style="width:33%; padding-top:10px">
