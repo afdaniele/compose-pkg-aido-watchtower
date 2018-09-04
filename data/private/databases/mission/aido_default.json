@@ -16,6 +16,49 @@
 					"position": "center center",
 					"background-color": "white"
 				}
+			},
+			{
+				"shape": {
+					"rows": 2,
+					"cols": 2
+				},
+				"renderer": "DiagnosticMsgs_DiagnosticArray_CoreUsage",
+				"title": "Core 1",
+				"subtitle": "\/diagnostics/core_1",
+				"args": {
+					"topic": "\/diagnostics",
+					"fps": 1,
+					"field": "Core 0 Idle",
+					"unit": "Usage (%)"
+				}
+			},
+			{
+				"shape": {
+					"rows": 2,
+					"cols": 2
+				},
+				"renderer": "DiagnosticMsgs_DiagnosticArray_CoreUsage",
+				"title": "Core 2",
+				"subtitle": "\/diagnostics/core_2",
+				"args": {
+					"topic": "\/diagnostics",
+					"fps": 1,
+					"field": "Core 1 Idle",
+					"unit": "Usage (%)"
+				}
+			},
+			{
+				"shape": {
+					"rows": 2,
+					"cols": 4
+				},
+				"renderer": "DiagnosticMsgs_DiagnosticArray_RamUsage",
+				"title": "RAM",
+				"subtitle": "\/diagnostics/ram",
+				"args": {
+					"topic": "\/diagnostics",
+					"fps": 1
+				}
 			}
 		]
 	},
