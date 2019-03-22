@@ -9,7 +9,7 @@
     "dependencies" : {
         "system-packages" : [],
         "packages" : [
-            "aido"
+            "aido_common"
         ]
     }
 }
