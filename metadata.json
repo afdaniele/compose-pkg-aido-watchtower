@@ -1,15 +1,15 @@
 {
-    "name" : "AIDO - Watchtower",
-    "description" : "Provides functionalities for monitoring AIDO Watchtowers",
+    "name" : "Duckietown - Watchtower",
+    "description" : "Provides functionalities for monitoring watchtowers in Duckietown",
     "core" : {
-        "namespace" : "aido_watchtower",
-        "file" : "AIDOWatchtower.php",
-        "class" : "AIDOWatchtower"
+        "namespace" : "duckietown_watchtower",
+        "file" : "Watchtower.php",
+        "class" : "Watchtower"
     },
     "dependencies" : {
         "system-packages" : [],
         "packages" : [
-            "aido_common"
+            "duckietown"
         ]
     }
 }

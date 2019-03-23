@@ -1,3 +1,3 @@
-# compose-pkg-aido-watchtower
+# compose-pkg-duckietown-watchtower
 
-AIDO package for the \compose\ platform (Watchtower functionalities).
+Package for managing Duckietown watchtowers in the \compose\ platform.

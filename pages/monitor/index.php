@@ -10,22 +10,22 @@ use \system\classes\Database as Database;
 <script src="<?php echo Core::getJSscriptURL('roslibjs.min.js', 'duckietown'); ?>" type="text/javascript"></script>
 
 <?php
-$mission_name = 'aido_default';
+$mission_name = 'watchtower_default';
 
 // define parameters for the mission control grid
 $grid_width = 966; // do not use 970px to accomodate for differences between browsers
 $resolution = 8;
 $block_gutter = 10;
 $block_border_thickness = 1;
-$websocket_address = Core::getSetting('websocket_address', 'aido_watchtower');
-$websocket_port = Core::getSetting('websocket_port', 'aido_watchtower');
+$websocket_address = Core::getSetting('websocket_address', 'duckietown_watchtower');
+$websocket_port = Core::getSetting('websocket_port', 'duckietown_watchtower');
 // use $HOSTNAME if $websocket_address is NULL
 if( is_null($websocket_address) || strlen($websocket_address) < 2 ){
     $websocket_address = Configuration::$HOSTNAME;
 }
 
 // read mission details
-$db = new Database( 'aido_watchtower', 'mission' );
+$db = new Database( 'duckietown_watchtower', 'mission' );
 $res = $db->read($mission_name);
 if( !$res['success'] ){
     Core::throwError( $res['data'] );

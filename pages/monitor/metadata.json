@@ -1,6 +1,6 @@
 {
     "name" : "Monitor",
-    "package" : "aido_watchtower",
+    "package" : "duckietown_watchtower",
     "menu_entry" : {
         "order" : 1,
         "icon" : {

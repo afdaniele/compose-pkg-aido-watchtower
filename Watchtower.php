@@ -5,7 +5,7 @@
 # @Last modified by:   afdaniele
 
 
-namespace system\packages\aido_watchtower;
+namespace system\packages\duckietown_watchtower;
 
 use \system\classes\Core;
 use \system\classes\Utils;
@@ -13,9 +13,9 @@ use \system\classes\Database;
 use \system\classes\Configuration;
 
 /**
-*   Module for managing AIDO watchtowers
+*   Module for managing watchtowers in Duckietown
 */
-class AIDOWatchtower{
+class Watchtower{
 
 	private static $initialized = false;
 
@@ -83,5 +83,5 @@ class AIDOWatchtower{
 
 	// YOUR PRIVATE METHODS HERE
 
-}//AIDOWatchtower
+}//Watchtower
 ?>
