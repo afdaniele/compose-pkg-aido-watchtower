@@ -1,16 +1,10 @@
 {
     "configuration_content" : {
-        "websocket_address" : {
-            "title" : "ROS-Bridge Websocket Hostname/IP",
+        "watchtower_name" : {
+            "title" : "Watchtower name",
             "type" : "text",
             "default" : null,
-            "details" : "The hostname or IP of the machine running the rosbridge_server module"
-        },
-        "websocket_port" : {
-            "title" : "ROS-Bridge Websocket port",
-            "type" : "numeric",
-            "default" : "9001",
-            "details" : "The Websocket port used by the rosbridge_server module"
+            "details" : "Name of the watchtower"
         }
     }
 }
